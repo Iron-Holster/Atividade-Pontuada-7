@@ -1,5 +1,23 @@
 import os
 
+# Função IMC
+def imc (peso, altura):
+    imc = peso / (altura*altura)
+
+    if imc < 18,5:
+        resultado = "Abaixo do peso"
+    elif imc >= 18,5 and imc < 25:
+        resultado = "Peso normal"
+    elif imc >= 25 and imc < 30:
+        resultado = "Sobrepeso"
+    elif imc >= 30 and imc < 35:
+        resultado = "Obesidade grau I"
+    elif imc >= 35 and imc < 40:
+        resultado = "Obesidade grau II"
+    elif imc >= 40:
+        resultado = "Obesidade grau III"
+    return imc, resultado
+
 # Função sem retorno.
 def logoSenai():
     os.system("cls || clear")
@@ -39,4 +57,5 @@ for i in range(len(nomes)):
     print("Idade:", idades[i])
     print("Altura:", alturas[i], "metros")
     print("Peso:", pesos[i], "quilogramas")
-    print()
+    print(f"IMC: ")
+    print(f"Estado atual: ")
